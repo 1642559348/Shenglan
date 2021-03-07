@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box_head,
+        .navbar,
+        .foot_nav,
+        .Content {
+            width: 88%;
+            margin: 0 auto;
+        }
+
+
+        .Content {
+            width: 60%;
+        }
+
+        .min_headbox {
+            display: flex;
+            width: 100%;
+            background-color: #055c92;
+
+        }
+
+        .box_head {
+            padding: 12px 0;
+        }
+
+        .row {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .headtr1 {
+            display: flex;
+        }
+
+        .headtr1 li,
+        .headtr2 {
+            list-style: none;
+            font-size: 0.9rem;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .headtr1 li {
+            margin-right: 15px;
+        }
+
+        /**
+         *导航栏
+         *
+        */
+        .navmain {
+            width: 100%;
+            padding: 10px 0;
+            display: flex;
+
+            background-color: rgba(255, 255, 255, 0.027);
+        }
+
+        .navbar {
+            width: 88%;
+            display: flex;
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+        .navbar_brand img {
+            width: 30%;
+        }
+
+        .navbar_nav {
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+        }
+
+        .navbar_nav li {
+            list-style: none;
+            margin-left: 15px;
+            font-size: 1.2em;
+        }
+
+        .navbar_nav li a {
+            color: black;
+        }
+
+        .huo {
+            width: 20px;
+            position: relative;
+            top: -18px;
+            left: -18px;
+        }
+
+        /* 
+        *
+        *底部 
+        */
+        .foot {
+            width: 100%;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .foot_nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .foot_left {
+            display: flex;
+            width: 70%;
+            align-items: center;
+            justify-content: flex-start;
+
+        }
+
+        .imgdib {
+            width: 5%;
+        }
+
+        .span01 {
+            width: 80%;
+            margin-left: 30px;
+            font-size: 0.8rem;
+        }
+
+        .foot_right {
+            width: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .oimgs {
+            width: 20%;
+            margin: 0px 5px;
+        }
+
+        /* 内容 */
+        .Content {
+            /* background: rgb(240, 240, 240); */
+            width: 100%;
+
+        }
+
+        /* 模块一 */
+        .Content_box1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            position: relative;
+
+        }
+
+        .Content_box1 img {
+            width: 100%;
+        }
+
+        .Content_box1 video {
+            width: 100%;
+        }
+
+
+
+        /* 模块二 */
+        .Content_box3 {
+            margin-top: 30px;
+            width: 100%;
+            display: none;
+        }
+
+        .Content_oul {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .content_li {
+            width: 60%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+
+        .content_li img {
+            width: 10%;
+        }
+
+        .content_li span {
+            display: block;
+            margin: 25px;
+            word-break: break-all;
+        }
+
+
+
+
+
+
+        /* 新增模块 */
+        .mapbox {
+            width: 100%;
+            height: 800px;
+            display: flex;
+        }
+
+        .trapezoid {
+            width: 100%;
+
+        }
+
+        .trapezoid iframe {
+            width: 100%;
+            height: 800px;
+            border: none;
+        }
+
+
+        .contextbox {
+            border-bottom: 805px solid rgb(245, 245, 245);
+            border-left: 300px solid transparent;
+            border-right: 0px solid transparent;
+            width: 30%;
+            position: absolute;
+            right: 0;
+            /* box-shadow: 0px 5px 8px 2px #ccc; */
+
+        }
+
+        .context {
+            width: 100%;
+            position: absolute;
+            right: 0;
+            top: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* background-color: tomato; */
+
+        }
+
+        .text1,
+        .text2,
+        .text3 {
+            width: 95%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+
+        /* 地图 */
+        .map {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mapbox2 {
+            width: 100%;
+            display: flex;
+            position: relative;
+        }
+
+
+        .contextbox2 {
+            border-bottom: 805px solid rgb(245, 245, 245);
+            border-left: 300px solid transparent;
+            border-right: 0px solid transparent;
+            width: 40%;
+            position: absolute;
+            right: 0;
+
+            /* box-shadow: 0px 5px 8px 2px #ccc; */
+
+        }
+
+        .context2 {
+            width: 100%;
+            position: absolute;
+            right: 0;
+            top: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-right: 50px;
+            /* background-color: tomato; */
+
+
+        }
+
+        .textnet1,
+        .textnet2,
+        .textnet3 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            margin-top: 20px;
+
+        }
+
+        .trapezoid2 {
+            width: 100%;
+        }
+
+        .oiframe {
+            width: 100vw;
+            height: 100vh;
+            border: none;
+        }
+
+        .lin {
+            width: 100%;
+            height: 1px;
+            transform: scale(0.5, 100%);
+            background-color: rgb(12, 125, 231);
+
+        }
+
+        .conus {
+            width: 100%;
+            display: flex;
+        }
+
+        .textnet {
+            overflow: hidden;
+        }
+
+        .uso {
+            margin-left: 10px;
+            color: rgb(6, 124, 221);
+        }
+
+
+        .Content_box3 {
+            display: none;
+        }
+
+        .Contents_box5 {
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            .mapbox {
+                width: 100%;
+            }
+
+            .Content_box3 {
+                display: block;
+            }
+
+            .contextbox2 {
+                display: none;
+            }
+
+            .oiframe {
+                height: 300px;
+            }
+
+            .Contents_box5 {
+                display: block;
+            }
+        }
+
+
+
+
+        /* 手机端 */
+        @media screen and (max-width: 768px) {
+
+            body {
+                background: rgb(240, 240, 240, 0.5);
+            }
+
+            .Content {
+                width: 88%;
+            }
+
+            .Content_box1 img {
+                height: 120px;
+            }
+
+            .fromcontent {
+                width: 94%;
+            }
+
+            .submitbox {
+                width: 100%;
+            }
+
+            .Introduction {
+                margin: 30px 20px;
+            }
+
+            .box_head {
+                width: 100%;
+                margin: 0 auto;
+                padding: 5px 0;
+            }
+
+            .headtr1 {
+                white-space: nowrap;
+            }
+
+            .headtr1 li,
+            .headtr2 {
+                font-size: 0.6rem;
+            }
+
+            .headtr1 li {
+                margin-right: 10px;
+            }
+
+            /* 导航栏 */
+            .navmain {
+                width: 100%;
+                background: rgb(255, 255, 255);
+            }
+
+            .navbar {
+                width: 100%;
+            }
+
+            .navbar_brand {
+                width: 15%;
+            }
+
+            .navbar_brand img {
+                width: 100%;
+            }
+
+            .navbar_nav {
+                width: 85%;
+                justify-content: space-around;
+            }
+
+            .navbar_nav li {
+                font-size: 0.6rem;
+                margin-left: 5px;
+            }
+
+            .huo {
+                width: 12px;
+                position: relative;
+                top: -12px;
+                left: -10px;
+            }
+
+            /* 底部 */
+            .foot_nav {
+                width: 100%;
+            }
+
+            .foot_left {
+                width: 70%;
+            }
+
+            .imgdib {
+                width: 10%;
+            }
+
+            .span01 {
+                width: 100%;
+            }
+
+            .foot_right {
+                width: 20%;
+            }
+
+            .oimgs {
+                width: 50%;
+                margin: 0px 5px;
+            }
+
+            .map {
+                flex-direction: column;
+            }
+
+            .Introduction {
+                width: 100%;
+            }
+
+            .content_li {
+                width: 90%;
+                box-shadow: 1px 1px 1px 1px rgb(167, 167, 167);
+                background-color: rgb(255, 255, 255);
+                margin: 2px;
+            }
+
+            .content_li img {
+                margin-top: 10px;
+                width: 27px;
+            }
+
+
+            .content_li span {
+                width: 70%;
+                display: block;
+                font-size: 0.9rem;
+                margin-top: 20px;
+            }
+
+
+            .box4h2 {
+                padding: 30px 0
+            }
+
+
+            .Content_box5 {
+                width: 99%;
+            }
+
+            .Content_box3 {
+                display: block;
+            }
+            .button-prev, .button-next { 
+                width: 50px;
+            }
+            .oiframes{
+                margin: 15px auto;
+                width: 100%;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部菜单 -->
+    <div class="min_headbox">
+        <div class="box_head">
+            <div class="row">
+                <ul class="headtr1">
+                    <li><a href="">公司首页</a></li>
+                    <li><a href="">臻蓝科技</a></li>
+                </ul>
+                <span class="headtr2">
+                    服务广西，改变广西IT教育 咨询热线：0771-5859600
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- 导航栏 -->
+    <!-- 导航栏 -->
+    <div class="navmain">
+        <nav class="navbar">
+            <a class="navbar_brand" href="#">
+                <img class="logimg" src="http://www.deepbluesoft.com/nn/img/dblogo.png" alt="">
+            </a>
+            <ul class="navbar_nav">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">课程中心</a>
+                    <img class="huo" src="http://www.deepbluesoft.com/nn/img/hot1.gif" alt="">
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">免费学习资源</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">学员故事</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">线上学院</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">技术专区</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- 内容区域快 -->
+    <div class="Content">
+        <!-- 模块一 -->
+        <div class="Content_box1">
+            <iframe class="oiframe" src="head.html" frameborder="0"
+                scrolling="no"></iframe>
+        </div>
+
+        <!-- 模块二 -->
+        <div class="Content_box3">
+            <ul class="Content_oul">
+                <li class="content_li">
+                    <img src="image/邮箱.png" alt="图片去哪了">
+                    <span>53401388@qq.com</span>
+                </li>
+                <li class="content_li">
+                    <img src="image/配套 电 话.png" alt="图片去哪了">
+                    <span>0771-5859600</span>
+                </li>
+                <li class="content_li">
+                    <img src="image/地址.png" alt="图片去哪了">
+                    <span class="nthd">南宁市高新区科园大道</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="map">
+            <div class="mapbox2">
+                <div class="trapezoid2">
+                    <iframe class="oiframes" scrolling="no" src="map.html" width="100%" height="800px">
+                        <p>请加载网络</p>
+                    </iframe>
+                </div>
+                <div class="contextbox2">
+                    <div class="context2">
+                        <div class="textnet">
+                            <h2>联系我们</h2>
+                            <div></div>
+                            <h3 class="conus">Contact <div class="uso">US</div>
+                            </h3>
+                        </div>
+                        <div class="textnet2">
+                            <h4>南宁市高新区科园大道58号康华药业大厦四楼电</h4>
+                            <h6>ADD : nanningshigaoxinqkeyuandadao 58 kanghuayaoyedashasilou</h6>
+                            <div class="lin"></div>
+                        </div>
+                        <div class="textnet3">
+                            <h2>官方热线：</h2>
+                            <span>00-000-000</span>
+                            <span>email@email.mt</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  手机端-->
+        <!-- <div class="Contents_box5">
+            <div class="contextbox3">
+                <h4>联系我们</h4>
+                <h3 class="">Contact <div class="">US</div>
+                </h3>
+                <h5>南宁市高新区科园大道58号康华药业大厦四楼电</h5>
+                <h6>ADD : nanningshigaoxinqkeyuandadao 58 kanghuayaoyedashasilou</h6>
+                <div class=""></div>
+                <h4>官方热线：</h4>
+                <span>00-000-000</span>
+                <span>email@email.mt</span>
+            </div>
+        </div> -->
+    </div>
+    <hr>
+    <!-- 底部 -->
+    <div class="foot">
+        <div class="foot_nav">
+            <div class="foot_left">
+                <img class="imgdib" src="http://www.deepbluesoft.com/nn/img/map.jpg" alt="">
+                <span class=" span01">
+                    版权所有 2002 - 2017 深蓝软件南宁分公司 地址：广西南宁市高新区科园大道58号康华药业大厦四楼
+                    电话：0771-5859600 邮箱:451218431@qq.com 粤ICP备14062679
+                </span>
+            </div>
+            <div class="foot_right">
+                <img class="oimgs" src="http://www.deepbluesoft.com/nn/img/footer_1.png" alt="">
+                <img class="oimgs" src="http://www.deepbluesoft.com/nn/img/footer_2.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

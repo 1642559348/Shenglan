@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box_head,
+        .navbar,
+        .foot_nav {
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        .min_headbox {
+            display: flex;
+            width: 100%;
+            background-color: #055c92;
+
+        }
+
+        .box_head {
+            padding: 5px 0;
+        }
+
+        .row {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .headtr1 {
+            display: flex;
+        }
+
+        .headtr1 li,
+        .headtr2 {
+            list-style: none;
+            font-size: 0.9rem;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .headtr1 li {
+            margin-right: 15px;
+        }
+
+        /**
+         *导航栏
+         *
+        */
+        .navmain {
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar_brand img {
+            width: 30%;
+        }
+
+        .navbar_nav {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+        }
+
+        .navbar_nav li {
+            list-style: none;
+            margin-left: 15px;
+            font-size: 1.2em;
+        }
+
+        .navbar_nav li a {
+            color: black;
+        }
+
+        .huo {
+            width: 20px;
+            position: relative;
+            top: -18px;
+            left: -18px;
+        }
+
+        /* 
+        *
+        *底部 
+        */
+        .foot {
+            width: 100%;
+            padding-top:15px; 
+        }
+
+        .foot_nav {
+            display: flex;
+            align-items: center;
+            justify-content:space-between;
+        }
+
+        .foot_left {
+            display: flex;
+            width: 70%;
+            align-items: center;
+            justify-content: flex-start;
+
+        }
+        .imgdib {
+            width: 5%;
+        }
+
+        .span01 {
+            width: 80%;
+            margin-left: 30px;
+            font-size: 0.8rem;
+        }
+
+        .foot_right{
+            width: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .oimgs{
+            width: 20%;
+            margin: 0px 5px;
+        }
+
+        /* 手机端 */
+        @media screen and (max-width: 768px) {
+            body {
+                background-color: tomato;
+            }
+
+            .box_head {
+                width: 100%;
+                margin: 0 auto;
+                padding: 5px 0;
+            }
+
+            .headtr1 {
+                white-space: nowrap;
+            }
+
+            .headtr1 li,
+            .headtr2 {
+                font-size: 0.6rem;
+            }
+
+            .headtr1 li {
+                margin-right: 10px;
+            }
+
+            /* 导航栏 */
+            .navmain {
+                width: 100%;
+                background: rgb(255, 255, 255);
+            }
+
+            .navbar {
+                width: 100%;
+            }
+
+            .navbar_brand {
+                width: 15%;
+            }
+
+            .navbar_brand img {
+                width: 100%;
+            }
+
+            .navbar_nav {
+                width: 85%;
+                justify-content: space-around;
+            }
+
+            .navbar_nav li {
+                font-size: 0.6rem;
+                margin-left: 5px;
+            }
+
+            .huo {
+                width: 12px;
+                position: relative;
+                top: -12px;
+                left: -10px;
+            }
+            /* 底部 */
+            .foot_nav{
+                width: 100%;
+            }
+            .foot_left{
+                width: 70%;
+            }
+            .imgdib {
+              width: 10%;
+            }
+            .span01{
+                width: 100%;
+            } 
+            .foot_right{
+                width: 20%;
+            }  
+            .oimgs{
+                width: 50%;
+                margin: 0px 5px;
+        }        
+   
+     }
+    </style>
+</head>
+
+<body>
+    <!-- 顶部菜单 -->
+    <div class="min_headbox">
+        <div class="box_head">
+            <div class="row">
+                <ul class="headtr1">
+                    <li><a href="">公司首页</a></li>
+                    <li><a href="">臻蓝科技</a></li>
+                </ul>
+                <span class="headtr2">
+                    服务广西，改变广西IT教育 咨询热线：0771-5859600
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- 导航栏 -->
+    <!-- 导航栏 -->
+    <div class="navmain">
+        <nav class="navbar">
+            <a class="navbar_brand" href="#">
+                <img class="logimg" src="http://www.deepbluesoft.com/nn/img/dblogo.png" alt="">
+            </a>
+            <ul class="navbar_nav">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">课程中心</a>
+                    <img class="huo" src="http://www.deepbluesoft.com/nn/img/hot1.gif" alt="">
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">免费学习资源</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">学员故事</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">线上学院</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">技术专区</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- 内容区域快 -->
+    <hr>
+    <!-- 底部 -->
+    <div class="foot">
+        <div class="foot_nav">
+            <div class="foot_left">
+                <img class="imgdib" src="http://www.deepbluesoft.com/nn/img/map.jpg" alt="">
+                <span class=" span01">
+                    版权所有 2002 - 2017 深蓝软件南宁分公司 地址：广西南宁市高新区科园大道58号康华药业大厦四楼
+                    电话：0771-5859600 邮箱:451218431@qq.com 粤ICP备14062679
+                </span>
+            </div>
+            <div class="foot_right">
+                <img class="oimgs" src="http://www.deepbluesoft.com/nn/img/footer_1.png" alt="">
+                <img class="oimgs" src="http://www.deepbluesoft.com/nn/img/footer_2.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
